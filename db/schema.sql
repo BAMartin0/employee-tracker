@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS employee_db;
-CREATE DATABASE employee_db; 
+DROP DATABASE IF EXISTS employee1_db;
+CREATE DATABASE employee1_db; 
 
 \c employee_db; 
 
@@ -10,7 +10,8 @@ CREATE TABLE department(
 
 CREATE TABLE role(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(40) NOT NULL, 
+    title VARCHAR(40) NOT NULL, 
+    salary DECIMAL NOT NULL,
     department_id INT NOT NULL,
     FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE
 );

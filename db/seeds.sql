@@ -4,16 +4,16 @@ INSERT INTO department (name) VALUES
 ('Finance'), 
 ('Legal');
 
-INSERT INTO role (name) 
+INSERT INTO role (title, salary, department_id) 
 VALUES 
-('Sales Lead'),
-('Lead Engineer'),
-('Accountant'),
-('Lawyer');
+('Sales Lead', 500.00, 1 ),
+('Lead Engineer', 400.00, 2),
+('Accountant', 300.00, 3),
+('Lawyer', 200.00, 4);
 
-INSERT INTO employee (first_name, last_name)
+INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUES 
-('Mike', 'Jones')
-('James', 'Bond')
-('Puff', 'Daddy')
-('Serena', 'Williams')
+('Mike', 'Jones', null, 1),
+('James', 'Bond', 1, 2),
+('Puff', 'Daddy', 1, 3),
+('Serena', 'Williams', null, 4);
